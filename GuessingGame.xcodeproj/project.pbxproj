@@ -12,6 +12,7 @@
 		3B7CB1D0216BE83F00FFCCA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7CB1CE216BE83F00FFCCA1 /* Main.storyboard */; };
 		3B7CB1D2216BE84000FFCCA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B7CB1D1216BE84000FFCCA1 /* Assets.xcassets */; };
 		3B7CB1D5216BE84000FFCCA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7CB1D3216BE84000FFCCA1 /* LaunchScreen.storyboard */; };
+		3B7CB1DD216D07BB00FFCCA1 /* GuessingScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB1DC216D07BB00FFCCA1 /* GuessingScreenVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3B7CB1D1216BE84000FFCCA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B7CB1D4216BE84000FFCCA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B7CB1D6216BE84000FFCCA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B7CB1DC216D07BB00FFCCA1 /* GuessingScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessingScreenVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				3B7CB1D1216BE84000FFCCA1 /* Assets.xcassets */,
 				3B7CB1D3216BE84000FFCCA1 /* LaunchScreen.storyboard */,
 				3B7CB1D6216BE84000FFCCA1 /* Info.plist */,
+				3B7CB1DC216D07BB00FFCCA1 /* GuessingScreenVC.swift */,
 			);
 			path = GuessingGame;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B7CB1DD216D07BB00FFCCA1 /* GuessingScreenVC.swift in Sources */,
 				3B7CB1CD216BE83F00FFCCA1 /* ViewController.swift in Sources */,
 				3B7CB1CB216BE83F00FFCCA1 /* AppDelegate.swift in Sources */,
 			);

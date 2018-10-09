@@ -20,6 +20,9 @@ Please choose a number from 0-100
 """)
         
     }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
