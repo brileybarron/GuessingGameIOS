@@ -97,7 +97,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Iiu-4K-Vhw">
-                                <rect key="frame" x="112.5" y="114" width="150.5" height="283.5"/>
+                                <rect key="frame" x="112.5" y="70" width="150.5" height="283.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrI-qS-aXu">
                                         <rect key="frame" x="20.5" y="0.0" width="109" height="20.5"/>
@@ -135,6 +135,14 @@
                                     <constraint firstItem="uSu-Pk-MHS" firstAttribute="centerX" secondItem="Iiu-4K-Vhw" secondAttribute="centerX" id="WU0-ND-Pyg"/>
                                 </constraints>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEV-3l-HBP">
+                                <rect key="frame" x="172" y="429" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Yes"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="4T8-S7-kLA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -148,6 +156,7 @@
                         <outlet property="guessingField" destination="1lD-5p-Xo5" id="zYY-hQ-F7t"/>
                         <outlet property="highOrLow" destination="uSu-Pk-MHS" id="eBb-Gx-ca8"/>
                         <outlet property="instructionLabel" destination="FrI-qS-aXu" id="Npi-hu-BIx"/>
+                        <outlet property="playAgainButton" destination="eEV-3l-HBP" id="boc-Ts-VP4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GOJ-67-N36" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -211,5 +220,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="iOK-w5-3R6"/>
+        <segue reference="4T8-S7-kLA"/>
     </inferredMetricsTieBreakers>
 </document>

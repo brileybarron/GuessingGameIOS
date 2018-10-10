@@ -15,7 +15,11 @@ class GuessingScreenVC: UIViewController {
     @IBOutlet weak var guessesRemaining: UILabel!
     @IBOutlet weak var highOrLow: UILabel!
     var guesses = 5
+    
+    @IBOutlet weak var playAgainButton: UIButton!
+    
     @IBAction func guessButtonTapped(_ sender: Any) {
+        
         if let intGuess = Int(guessingField.text!) {
             if intGuess > ViewController.randomNumber {
                 highOrLow.text = "Too High"
@@ -23,7 +27,17 @@ class GuessingScreenVC: UIViewController {
                 highOrLow.text = "Too Low"
             }
             guesses -= 1
-            guessesRemaining.text = "\(guesses) guesses remaining"
+            if Int(guessingField.text!) == ViewController.randomNumber{
+                highOrLow.text = "Congrats, you have won."
+                guessesRemaining.text = "Would you like to play again?"
+                playAgainButton.isHidden = false
+            } else if guesses == 0 {
+                guessesRemaining.text = "Would you like to play again?"
+                highOrLow.text = "The correct answer was \(ViewController.randomNumber)"
+                playAgainButton.isHidden = false
+            } else {
+                guessesRemaining.text = "\(guesses) guesses remaining"
+            }
         } else {
             highOrLow.text = "Please use a number"
         }
