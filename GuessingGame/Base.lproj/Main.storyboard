@@ -97,35 +97,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Iiu-4K-Vhw">
-                                <rect key="frame" x="112.5" y="70" width="150.5" height="283.5"/>
+                                <rect key="frame" x="105" y="70" width="165" height="283.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrI-qS-aXu">
-                                        <rect key="frame" x="20.5" y="0.0" width="109" height="20.5"/>
+                                        <rect key="frame" x="28" y="0.0" width="109" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="1lD-5p-Xo5">
-                                        <rect key="frame" x="49" y="52.5" width="52" height="64"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="1lD-5p-Xo5">
+                                        <rect key="frame" x="56.5" y="52.5" width="52" height="64"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pb-nz-XdY">
-                                        <rect key="frame" x="53.5" y="148.5" width="43" height="30"/>
+                                        <rect key="frame" x="61" y="148.5" width="43" height="30"/>
                                         <state key="normal" title="Guess"/>
                                         <connections>
                                             <action selector="guessButtonTapped:" destination="0ed-JE-wzP" eventType="touchUpInside" id="ptW-fM-VLp"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Too High/Low" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSu-Pk-MHS">
-                                        <rect key="frame" x="23" y="210.5" width="104.5" height="20.5"/>
+                                        <rect key="frame" x="30.5" y="210.5" width="104.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guesses Remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Rn-Pa-eWx">
-                                        <rect key="frame" x="0.0" y="263" width="150.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Guesses Remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Rn-Pa-eWx">
+                                        <rect key="frame" x="0.0" y="263" width="165" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -135,9 +135,8 @@
                                     <constraint firstItem="uSu-Pk-MHS" firstAttribute="centerX" secondItem="Iiu-4K-Vhw" secondAttribute="centerX" id="WU0-ND-Pyg"/>
                                 </constraints>
                             </stackView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEV-3l-HBP">
-                                <rect key="frame" x="172" y="429" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEV-3l-HBP">
+                                <rect key="frame" x="172.5" y="403.5" width="30" height="30"/>
                                 <state key="normal" title="Yes"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="4T8-S7-kLA"/>
@@ -146,6 +145,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Iiu-4K-Vhw" firstAttribute="centerX" secondItem="ylT-k4-BRW" secondAttribute="centerX" id="0mP-Pe-BUn"/>
+                            <constraint firstItem="eEV-3l-HBP" firstAttribute="top" secondItem="Iiu-4K-Vhw" secondAttribute="bottom" constant="50" id="12S-Rw-I7l"/>
+                            <constraint firstItem="eEV-3l-HBP" firstAttribute="centerX" secondItem="ylT-k4-BRW" secondAttribute="centerX" id="TvJ-k1-ShK"/>
                             <constraint firstItem="Iiu-4K-Vhw" firstAttribute="top" secondItem="mKd-z6-ctS" secondAttribute="top" constant="50" id="il8-XT-u4C"/>
                             <constraint firstItem="Iiu-4K-Vhw" firstAttribute="centerX" secondItem="ylT-k4-BRW" secondAttribute="centerX" id="ma9-sb-qG5"/>
                         </constraints>
@@ -192,45 +194,29 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                        <connections>
-                                            <action selector="maxNumberInRangeTypedIn:" destination="iac-px-f5N" eventType="editingDidEnd" id="Ran-Am-e3i"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nFV-Xi-8uh">
-                                <rect key="frame" x="169" y="449" width="37" height="30"/>
-                                <subviews>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DwC-Nw-HYK">
-                                        <rect key="frame" x="0.0" y="0.0" width="37" height="0.0"/>
-                                        <state key="normal" title="Next"/>
-                                        <connections>
-                                            <action selector="customRangeDoneButtonTapped:" destination="iac-px-f5N" eventType="touchUpInside" id="kbg-gs-siM"/>
-                                            <segue destination="0ed-JE-wzP" kind="show" id="TCP-rY-gkU"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEc-d1-t2W">
-                                        <rect key="frame" x="0.0" y="0.0" width="37" height="30"/>
-                                        <state key="normal" title="Done"/>
-                                        <connections>
-                                            <action selector="checkRange:" destination="iac-px-f5N" eventType="touchUpInside" id="KL7-q7-vqe"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkQ-br-zNe">
+                                <rect key="frame" x="169" y="419" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="checkRangeButtonTapped:" destination="iac-px-f5N" eventType="touchUpInside" id="jxg-DN-sz4"/>
+                                    <segue destination="0ed-JE-wzP" kind="show" id="afP-AS-W5l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="V8q-sN-OUx" firstAttribute="centerX" secondItem="eq6-mW-wjR" secondAttribute="centerX" id="Kkr-V6-f21"/>
                             <constraint firstItem="V8q-sN-OUx" firstAttribute="centerY" secondItem="eq6-mW-wjR" secondAttribute="centerY" id="Pxp-Cz-0P5"/>
-                            <constraint firstItem="nFV-Xi-8uh" firstAttribute="centerX" secondItem="eq6-mW-wjR" secondAttribute="centerX" id="gOW-2E-tHa"/>
-                            <constraint firstItem="nFV-Xi-8uh" firstAttribute="top" secondItem="V8q-sN-OUx" secondAttribute="bottom" constant="50" id="jjz-gm-7Vr"/>
+                            <constraint firstItem="nkQ-br-zNe" firstAttribute="centerX" secondItem="eq6-mW-wjR" secondAttribute="centerX" id="gnX-PH-u7s"/>
+                            <constraint firstItem="nkQ-br-zNe" firstAttribute="top" secondItem="V8q-sN-OUx" secondAttribute="bottom" constant="20" id="liZ-9Y-yaf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1LO-c5-IcJ"/>
                     </view>
                     <connections>
-                        <outlet property="checkRange" destination="KEc-d1-t2W" id="2Wo-5e-H0V"/>
-                        <outlet property="customRangeDoneButton" destination="DwC-Nw-HYK" id="5v9-2K-6k3"/>
+                        <outlet property="checkRange" destination="nkQ-br-zNe" id="J1H-K8-mPW"/>
                         <outlet property="instructionLabel" destination="xRl-rk-a5i" id="lLH-Jw-IZc"/>
                         <outlet property="maxNumberInRange" destination="RKR-vU-1iz" id="dse-Fb-7se"/>
                     </connections>
@@ -259,7 +245,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TCP-rY-gkU"/>
+        <segue reference="afP-AS-W5l"/>
         <segue reference="4T8-S7-kLA"/>
     </inferredMetricsTieBreakers>
 </document>
