@@ -16,6 +16,7 @@ class GuessingScreenVC: UIViewController {
     var randomNumber : Int?
     
     //IB Outlets
+    @IBOutlet weak var guessButton: UIButton!
     @IBOutlet weak var instructionLabel: UILabel!
     @IBOutlet weak var guessingField: UITextField!
     @IBOutlet weak var guessesRemaining: UILabel!
@@ -36,10 +37,12 @@ class GuessingScreenVC: UIViewController {
                 highOrLow.text = "Congrats, you have won."
                 guessesRemaining.text = "Would you like to play again?"
                 playAgainButton.isHidden = false
+                guessButton.isHidden = true
             } else if guesses == 0 {
                 guessesRemaining.text = "Would you like to play again?"
                 highOrLow.text = "The correct answer was \(randomNumber!)"
                 playAgainButton.isHidden = false
+                guessButton.isHidden = true
             } else {
                 guessesRemaining.text = "\(guesses) guesses remaining"
             }
