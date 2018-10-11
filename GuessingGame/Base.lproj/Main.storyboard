@@ -156,8 +156,8 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="PlayAgainBackToRoot" id="4T8-S7-kLA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Of Guesses afghsiudjgfhfojshdfunqiwfcjiwebfiwbneifbjsbfiuwyadhfijbduf3jfbvqaiudjnajsdhueqwfbiuq" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFF-YS-QII">
-                                <rect key="frame" x="16" y="70" width="109" height="183"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Of Guesses:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFF-YS-QII">
+                                <rect key="frame" x="16" y="70" width="109" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

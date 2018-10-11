@@ -35,10 +35,12 @@ class GuessingScreenVC: UIViewController {
             if intGuess > randomNumberAndMax.randomNumber! { //Gives either a too high or too low to guide the user
                 highOrLow.text = "Your Guess was Too High"
                 eliminateNumbers(userInput: intGuess, high: true)
+                updateGuesses(userInput: intGuess)
                 updateProbability()
             } else if intGuess < randomNumberAndMax.randomNumber! {
                 highOrLow.text = "Your Guess was Too Low"
                 eliminateNumbers(userInput: intGuess, high: false)
+                updateGuesses(userInput: intGuess)
                 updateProbability()
             }
             
@@ -78,6 +80,22 @@ class GuessingScreenVC: UIViewController {
                     avaliableRange.remove(at: avaliableRange.firstIndex(of: number)!)
                 }
             }
+        }
+    }
+    
+    func updateGuesses (userInput: Int) {
+        var userGuess = String(userInput)
+        guessesUsed.append(userGuess)
+        if guessesUsed.count == 1 {
+            listOfGuesses.text = "List of Guesses: \(guessesUsed[0])"
+        } else if guessesUsed.count == 2 {
+            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]), \(guessesUsed[1])"
+        } else if guessesUsed.count == 3 {
+            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]), \(guessesUsed[1]), \(guessesUsed[2])"
+        } else if guessesUsed.count == 4 {
+            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]), \(guessesUsed[1]), \(guessesUsed[2]), \(guessesUsed[3])"
+        } else if guessesUsed.count == 5 {
+            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]), \(guessesUsed[1]), \(guessesUsed[2]), \(guessesUsed[3]), \(guessesUsed[4])"
         }
     }
     
