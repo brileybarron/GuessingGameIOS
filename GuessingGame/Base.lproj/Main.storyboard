@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,63 +18,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="1FD-n9-L7I">
-                                <rect key="frame" x="145.5" y="73.5" width="84" height="520"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1FD-n9-L7I">
+                                <rect key="frame" x="145.5" y="185.5" width="84" height="296"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8Y-uy-4ZY">
                                         <rect key="frame" x="0.0" y="0.0" width="84" height="30"/>
                                         <state key="normal" title="How To Play"/>
                                         <connections>
-                                            <segue destination="QlB-UW-vC1" kind="show" id="B9j-gW-uNU"/>
+                                            <segue destination="QlB-UW-vC1" kind="show" identifier="HowToPlayToHowToPlayScreen" id="B9j-gW-uNU"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ep0-WD-jbg">
-                                        <rect key="frame" x="24" y="75" width="36" height="20.5"/>
+                                        <rect key="frame" x="24" y="43" width="36" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQO-ih-Ftr">
-                                        <rect key="frame" x="21" y="140" width="42" height="30"/>
+                                        <rect key="frame" x="21" y="76" width="42" height="30"/>
                                         <state key="normal" title="0-100"/>
                                         <connections>
                                             <action selector="oneToOneHundredButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hxb-tM-X5h"/>
-                                            <segue destination="0ed-JE-wzP" kind="show" id="sgB-eW-vxX"/>
+                                            <segue destination="0ed-JE-wzP" kind="show" identifier="EasyToGuessingScreen" id="sgB-eW-vxX"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjV-Dc-hp8">
-                                        <rect key="frame" x="11" y="215" width="62" height="20.5"/>
+                                        <rect key="frame" x="11" y="119" width="62" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2c-9U-PI9">
-                                        <rect key="frame" x="20" y="280" width="44" height="30"/>
+                                        <rect key="frame" x="20" y="152" width="44" height="30"/>
                                         <state key="normal" title="0-500"/>
                                         <connections>
                                             <action selector="oneToFiveHundredButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2n3-Ij-1iK"/>
-                                            <segue destination="0ed-JE-wzP" kind="show" id="iOK-w5-3R6"/>
+                                            <segue destination="0ed-JE-wzP" kind="show" identifier="MediumToGuessingScreen" id="iOK-w5-3R6"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKv-7T-NfR">
-                                        <rect key="frame" x="23.5" y="355" width="37.5" height="20.5"/>
+                                        <rect key="frame" x="23.5" y="195" width="37.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFd-ap-Jkl">
-                                        <rect key="frame" x="16.5" y="420" width="51" height="30"/>
+                                        <rect key="frame" x="16.5" y="228" width="51" height="30"/>
                                         <state key="normal" title="0-1000"/>
                                         <connections>
                                             <action selector="oneToOneThousandButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MBJ-08-9Qc"/>
-                                            <segue destination="0ed-JE-wzP" kind="show" id="vwA-kE-KV2"/>
+                                            <segue destination="0ed-JE-wzP" kind="show" identifier="HardToGuessingScreen" id="vwA-kE-KV2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyn-sx-FmG">
-                                        <rect key="frame" x="15" y="490" width="54" height="30"/>
+                                        <rect key="frame" x="15" y="266" width="54" height="30"/>
                                         <state key="normal" title="Custom"/>
                                         <connections>
-                                            <segue destination="iac-px-f5N" kind="show" id="gcZ-6p-GLL"/>
+                                            <segue destination="iac-px-f5N" kind="show" identifier="CustomToCustomVC" id="gcZ-6p-GLL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -104,7 +105,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Iiu-4K-Vhw">
-                                <rect key="frame" x="105" y="114" width="165" height="283.5"/>
+                                <rect key="frame" x="105" y="70" width="165" height="336"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrI-qS-aXu">
                                         <rect key="frame" x="28" y="0.0" width="109" height="20.5"/>
@@ -131,8 +132,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Probability: percent" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Haw-hI-tRe">
+                                        <rect key="frame" x="8" y="263" width="149.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Guesses Remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Rn-Pa-eWx">
-                                        <rect key="frame" x="0.0" y="263" width="165" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="315.5" width="165" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -143,18 +150,27 @@
                                 </constraints>
                             </stackView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEV-3l-HBP">
-                                <rect key="frame" x="172.5" y="417.5" width="30" height="30"/>
+                                <rect key="frame" x="172.5" y="426" width="30" height="30"/>
                                 <state key="normal" title="Yes"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="4T8-S7-kLA"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="PlayAgainBackToRoot" id="4T8-S7-kLA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Of Guesses afghsiudjgfhfojshdfunqiwfcjiwebfiwbneifbjsbfiuwyadhfijbduf3jfbvqaiudjnajsdhueqwfbiuq" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFF-YS-QII">
+                                <rect key="frame" x="16" y="70" width="109" height="183"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Iiu-4K-Vhw" firstAttribute="centerX" secondItem="ylT-k4-BRW" secondAttribute="centerX" id="0mP-Pe-BUn"/>
+                            <constraint firstItem="tFF-YS-QII" firstAttribute="leading" secondItem="mKd-z6-ctS" secondAttribute="leading" constant="16" id="JS7-dR-M4w"/>
                             <constraint firstItem="eEV-3l-HBP" firstAttribute="centerX" secondItem="ylT-k4-BRW" secondAttribute="centerX" id="TvJ-k1-ShK"/>
+                            <constraint firstItem="tFF-YS-QII" firstAttribute="top" secondItem="mKd-z6-ctS" secondAttribute="top" constant="50" id="ViU-R4-UUO"/>
                             <constraint firstItem="Iiu-4K-Vhw" firstAttribute="top" secondItem="mKd-z6-ctS" secondAttribute="top" constant="50" id="il8-XT-u4C"/>
+                            <constraint firstItem="mKd-z6-ctS" firstAttribute="trailing" secondItem="tFF-YS-QII" secondAttribute="trailing" constant="250" id="lKP-1D-6Tn"/>
                             <constraint firstItem="Iiu-4K-Vhw" firstAttribute="centerX" secondItem="ylT-k4-BRW" secondAttribute="centerX" id="ma9-sb-qG5"/>
                             <constraint firstItem="eEV-3l-HBP" firstAttribute="top" secondItem="Iiu-4K-Vhw" secondAttribute="bottom" constant="20" id="zKV-IV-OWw"/>
                         </constraints>
@@ -166,7 +182,9 @@
                         <outlet property="guessingField" destination="1lD-5p-Xo5" id="zYY-hQ-F7t"/>
                         <outlet property="highOrLow" destination="uSu-Pk-MHS" id="eBb-Gx-ca8"/>
                         <outlet property="instructionLabel" destination="FrI-qS-aXu" id="Npi-hu-BIx"/>
+                        <outlet property="listOfGuesses" destination="tFF-YS-QII" id="qxZ-fQ-zVy"/>
                         <outlet property="playAgainButton" destination="eEV-3l-HBP" id="boc-Ts-VP4"/>
+                        <outlet property="probabilityLabel" destination="Haw-hI-tRe" id="4MZ-KB-9l2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GOJ-67-N36" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -181,9 +199,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter the maximum value for the range:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRl-rk-a5i">
-                                <rect key="frame" x="16" y="151" width="343" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the maximum value for the range:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRl-rk-a5i">
+                                <rect key="frame" x="16" y="176" width="343" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -210,16 +227,20 @@
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="checkRangeButtonTapped:" destination="iac-px-f5N" eventType="touchUpInside" id="jxg-DN-sz4"/>
-                                    <segue destination="0ed-JE-wzP" kind="show" id="afP-AS-W5l"/>
+                                    <segue destination="0ed-JE-wzP" kind="show" identifier="CustomVCToGuessingScreen" id="afP-AS-W5l"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="1LO-c5-IcJ" firstAttribute="trailing" secondItem="xRl-rk-a5i" secondAttribute="trailing" constant="16" id="BVL-T0-gze"/>
                             <constraint firstItem="V8q-sN-OUx" firstAttribute="centerX" secondItem="eq6-mW-wjR" secondAttribute="centerX" id="Kkr-V6-f21"/>
                             <constraint firstItem="V8q-sN-OUx" firstAttribute="centerY" secondItem="eq6-mW-wjR" secondAttribute="centerY" id="Pxp-Cz-0P5"/>
+                            <constraint firstItem="xRl-rk-a5i" firstAttribute="leading" secondItem="1LO-c5-IcJ" secondAttribute="leading" constant="16" id="Vqy-MQ-uFp"/>
+                            <constraint firstItem="xRl-rk-a5i" firstAttribute="centerX" secondItem="eq6-mW-wjR" secondAttribute="centerX" id="gWl-Qf-otA"/>
                             <constraint firstItem="nkQ-br-zNe" firstAttribute="centerX" secondItem="eq6-mW-wjR" secondAttribute="centerX" id="gnX-PH-u7s"/>
                             <constraint firstItem="nkQ-br-zNe" firstAttribute="top" secondItem="V8q-sN-OUx" secondAttribute="bottom" constant="20" id="liZ-9Y-yaf"/>
+                            <constraint firstItem="V8q-sN-OUx" firstAttribute="top" secondItem="xRl-rk-a5i" secondAttribute="bottom" constant="20" id="zRP-AT-HqM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1LO-c5-IcJ"/>
                     </view>
@@ -231,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cdk-zp-fjo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992.79999999999995" y="825.33733133433293"/>
+            <point key="canvasLocation" x="993" y="893"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="e39-Mw-i7N">
@@ -242,46 +263,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNz-kh-nEr">
-                                <rect key="frame" x="58" y="114" width="259.5" height="60"/>
+                                <rect key="frame" x="58" y="70" width="259.5" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1) Either choose the difficulty or if you want to make a custom range" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VM1-I9-g36">
-                                <rect key="frame" x="16" y="204" width="343" height="41"/>
+                                <rect key="frame" x="16" y="160" width="343" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2) If you choose to make a custom range enter the maximum number you want to pick from.  Then tap Done." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niU-7p-mAh">
-                                <rect key="frame" x="16" y="275" width="343" height="61"/>
+                                <rect key="frame" x="16" y="231" width="343" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMx-OK-cxA">
-                                <rect key="frame" x="16" y="366" width="343" height="81.5"/>
+                                <rect key="frame" x="16" y="322" width="343" height="81.5"/>
                                 <string key="text">3) Then in the text box enter your guesses.  You will always have 5 guesses.  The range depends on the difficulty.  The ranges are as follows:</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="96y-xG-EtG">
-                                <rect key="frame" x="16" y="477.5" width="343" height="121.5"/>
+                                <rect key="frame" x="16" y="433.5" width="343" height="121.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy: 1 - 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddg-d3-oKZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy: 0 - 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddg-d3-oKZ">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium: 1 - 500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyJ-bW-fys">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium: 0 - 500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyJ-bW-fys">
                                         <rect key="frame" x="0.0" y="50.5" width="343" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard: 1 - 1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSz-tA-3x3">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard: 0 - 1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSz-tA-3x3">
                                         <rect key="frame" x="0.0" y="101" width="343" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -341,7 +362,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sgB-eW-vxX"/>
-        <segue reference="aQc-s3-BYW"/>
+        <segue reference="afP-AS-W5l"/>
+        <segue reference="4T8-S7-kLA"/>
     </inferredMetricsTieBreakers>
 </document>

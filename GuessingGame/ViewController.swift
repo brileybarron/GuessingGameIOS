@@ -11,19 +11,22 @@ import UIKit
 class ViewController: UIViewController {
     
     //Variable
-    var randomNumber : Int = 262238663
-    
+    var randomNumberAndMax : (randomNumber: Int? , maxNumber: Int?) = (262238663, 100)
+
     //IB Action
     @IBAction func oneToOneHundredButtonTapped(_ sender: Any) {
-        randomNumber = Int.random(in: 0...100)
+        randomNumberAndMax.randomNumber = Int.random(in: 0...100)
+        randomNumberAndMax.maxNumber = 100
     }
     
     @IBAction func oneToFiveHundredButtonTapped(_ sender: Any) {
-        randomNumber = Int.random(in: 0...500)
+        randomNumberAndMax.randomNumber = Int.random(in: 0...500)
+        randomNumberAndMax.maxNumber = 500
     }
     
     @IBAction func oneToOneThousandButtonTapped(_ sender: Any) {
-        randomNumber = Int.random(in: 0...1000)
+        randomNumberAndMax.randomNumber = Int.random(in: 0...1000)
+        randomNumberAndMax.maxNumber = 1000
     }
     
     
@@ -33,8 +36,7 @@ class ViewController: UIViewController {
         if segue.destination is GuessingScreenVC
         {
             let vc = segue.destination as? GuessingScreenVC
-            vc?.randomNumber = randomNumber
-            
+            vc?.randomNumberAndMax = randomNumberAndMax
         }
     }
     

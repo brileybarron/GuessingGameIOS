@@ -9,6 +9,7 @@
 import UIKit
 
 class CustomVC: ViewController {
+    
     @IBOutlet weak var maxNumberInRange: UITextField!
     
     @IBOutlet weak var checkRange: UIButton!
@@ -21,10 +22,18 @@ class CustomVC: ViewController {
             maxNumberInRange.text?.removeAll()
             return
         }
-        randomNumber = Int.random(in: 0...Int(maxNumberInRange.text!)!)
+        randomNumberAndMax.randomNumber = Int.random(in: 0...Int(maxNumberInRange.text!)!)
+        randomNumberAndMax.maxNumber = Int(maxNumberInRange.text!)!
     }
-    
-
+//    func shouldPerformSeguewithIdentifier (identifier: "CustomVCToGuessingScreen"!, sender: Any?) -> Bool {
+//        guard let userInput = UInt32(maxNumberInRange.text!) else{
+//            instructionLabel.text = "Please use a positive number"
+//            maxNumberInRange.text?.removeAll()
+//            return false
+//        }
+//        randomNumber = Int.random(in: 0...Int(maxNumberInRange.text!)!)
+//        return true
+//    }
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -32,7 +41,7 @@ class CustomVC: ViewController {
         if segue.destination is GuessingScreenVC
         {
             let vc = segue.destination as? GuessingScreenVC
-            vc?.randomNumber = randomNumber
+            vc?.randomNumberAndMax = randomNumberAndMax
 //            vc?.instructionLabel.text = "Please guess a number 1-\(randomNumber)"
         }
     }
