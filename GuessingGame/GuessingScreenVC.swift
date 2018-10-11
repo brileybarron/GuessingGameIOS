@@ -35,11 +35,17 @@ class GuessingScreenVC: UIViewController {
             if intGuess > randomNumberAndMax.randomNumber! { //Gives either a too high or too low to guide the user
                 highOrLow.text = "Your Guess was Too High"
                 eliminateNumbers(userInput: intGuess, high: true)
+                let userGuess = String(intGuess)
+                guessesUsed.append(userGuess)
+                guessesUsed.append("too hi")
                 updateGuesses(userInput: intGuess)
                 updateProbability()
             } else if intGuess < randomNumberAndMax.randomNumber! {
-                highOrLow.text = "Your Guess was Too Low"
+                highOrLow.text = "Your Guess was Too low"
                 eliminateNumbers(userInput: intGuess, high: false)
+                let userGuess = String(intGuess)
+                guessesUsed.append(userGuess)
+                guessesUsed.append("too lo")
                 updateGuesses(userInput: intGuess)
                 updateProbability()
             }
@@ -65,6 +71,8 @@ class GuessingScreenVC: UIViewController {
             highOrLow.text = "Please use a number"
         
         }
+        
+        guessingField.text?.removeAll()
     }
     
     func eliminateNumbers (userInput: Int, high: Bool){
@@ -84,24 +92,22 @@ class GuessingScreenVC: UIViewController {
     }
     
     func updateGuesses (userInput: Int) {
-        var userGuess = String(userInput)
-        guessesUsed.append(userGuess)
-        if guessesUsed.count == 1 {
-            listOfGuesses.text = "List of Guesses: \(guessesUsed[0])"
-        } else if guessesUsed.count == 2 {
-            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]), \(guessesUsed[1])"
-        } else if guessesUsed.count == 3 {
-            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]), \(guessesUsed[1]), \(guessesUsed[2])"
+        if guessesUsed.count == 2 {
+            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1])"
         } else if guessesUsed.count == 4 {
-            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]), \(guessesUsed[1]), \(guessesUsed[2]), \(guessesUsed[3])"
-        } else if guessesUsed.count == 5 {
-            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]), \(guessesUsed[1]), \(guessesUsed[2]), \(guessesUsed[3]), \(guessesUsed[4])"
+            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1]), \(guessesUsed[2]) \(guessesUsed[3])"
+        } else if guessesUsed.count == 6 {
+            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1]), \(guessesUsed[2]) \(guessesUsed[3]), \(guessesUsed[4]) \(guessesUsed[5])"
+        } else if guessesUsed.count == 8 {
+            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1]), \(guessesUsed[2]) \(guessesUsed[3]), \(guessesUsed[4]) \(guessesUsed[5]), \(guessesUsed[6]) \(guessesUsed[7])"
+        } else if guessesUsed.count == 10 {
+            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1]), \(guessesUsed[2]) \(guessesUsed[3]), \(guessesUsed[4]) \(guessesUsed[5]), , \(guessesUsed[6]) \(guessesUsed[7]), \(guessesUsed[8]) \(guessesUsed[9])"
         }
     }
     
     func updateProbability () {
         probability = 1 / Double(avaliableRange.count) * 100
-        probabilityLabel.text = "Probability: \(probability)%"
+        probabilityLabel.text = "Probability: \(round(probability * 1000)/1000)%"
     }
     
     //LifeCycle
