@@ -16,9 +16,10 @@ class GuessingScreenVC: UIViewController {
     var probability : Double = 0
     var avaliableRange = [Int]()
     var guessesUsed = [String]()
-    
+//    var overallPercentProbability: Double = 0
     //IB Outlets
-    @IBOutlet weak var listOfGuesses: UILabel!
+//    @IBOutlet weak var overallProbability: UILabel!
+//    @IBOutlet weak var listOfGuesses: UILabel!
     @IBOutlet weak var guessButton: UIButton!
     @IBOutlet weak var instructionLabel: UILabel!
     @IBOutlet weak var probabilityLabel: UILabel!
@@ -90,23 +91,35 @@ class GuessingScreenVC: UIViewController {
         }
     }
     
-    func updateGuesses (userInput: Int) { //this is only used to update the text in the guess history
-        if guessesUsed.count == 2 {
-            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1])"
-        } else if guessesUsed.count == 4 {
-            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1]), \(guessesUsed[2]) \(guessesUsed[3])"
-        } else if guessesUsed.count == 6 {
-            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1]), \(guessesUsed[2]) \(guessesUsed[3]), \(guessesUsed[4]) \(guessesUsed[5])"
-        } else if guessesUsed.count == 8 {
-            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1]), \(guessesUsed[2]) \(guessesUsed[3]), \(guessesUsed[4]) \(guessesUsed[5]), \(guessesUsed[6]) \(guessesUsed[7])"
-        } else if guessesUsed.count == 10 {
-            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1]), \(guessesUsed[2]) \(guessesUsed[3]), \(guessesUsed[4]) \(guessesUsed[5]), , \(guessesUsed[6]) \(guessesUsed[7]), \(guessesUsed[8]) \(guessesUsed[9])"
-        }
-    }
-    
+//    func updateGuesses (userInput: Int) { //this is only used to update the text in the guess history
+//        if guessesUsed.count == 2 {
+//            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1])"
+//        } else if guessesUsed.count == 4 {
+//            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1]), \(guessesUsed[2]) \(guessesUsed[3])"
+//        } else if guessesUsed.count == 6 {
+//            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1]), \(guessesUsed[2]) \(guessesUsed[3]), \(guessesUsed[4]) \(guessesUsed[5])"
+//        } else if guessesUsed.count == 8 {
+//            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1]), \(guessesUsed[2]) \(guessesUsed[3]), \(guessesUsed[4]) \(guessesUsed[5]), \(guessesUsed[6]) \(guessesUsed[7])"
+//        } else if guessesUsed.count == 10 {
+//            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1]), \(guessesUsed[2]) \(guessesUsed[3]), \(guessesUsed[4]) \(guessesUsed[5]), , \(guessesUsed[6]) \(guessesUsed[7]), \(guessesUsed[8]) \(guessesUsed[9])"
+//        }
+//    }
+//
     func updateProbability () { //recalculates the probability and updates the probability label
+//        var numer = 1
+//
+//        for nums in 0...(randomNumberAndMax.guesses! - 2){
+//            numer *= 2
+//        }
         probability = 1 / Double(avaliableRange.count) * 100
         probabilityLabel.text = "Probability: \(round(probability * 1000)/1000)%"
+//        if numer < randomNumberAndMax.maxNumber! {
+//            overallPercentProbability = (Double(numer) / Double(randomNumberAndMax.maxNumber!)) * 100
+//            overallPercentProbability = round(overallPercentProbability * 100) / 100
+//            overallProbability.text = "Overall Probability: \(overallPercentProbability)%"
+//        } else {
+//            overallProbability.text = "Overall Probability: 100%"
+//        }
     }
     
 
@@ -130,6 +143,8 @@ class GuessingScreenVC: UIViewController {
         }
         avaliableRange = Array(0...randomNumberAndMax.maxNumber!) //updates the range
         updateProbability() //and the probability
+        
+        guessesRemaining.text = "\(randomNumberAndMax.guesses!) guesses remaining"
         
         //adds a gesture that allows the keyboard to be lowered if tapped outside of the keyboard.
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: Selector("endEditing:")))

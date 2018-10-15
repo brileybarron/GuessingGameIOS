@@ -18,16 +18,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VsX-EL-deV">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To The Guessing Game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOq-16-vCh">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8Y-uy-4ZY">
-                                        <rect key="frame" x="0.0" y="100.5" width="375" height="100.5"/>
+                                        <rect key="frame" x="0.0" y="108" width="375" height="107.5"/>
                                         <color key="backgroundColor" red="0.51804250415142639" green="1" blue="0.52509858115590302" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
                                         <state key="normal" title="How To Play"/>
@@ -36,7 +36,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQO-ih-Ftr">
-                                        <rect key="frame" x="0.0" y="201" width="375" height="100.5"/>
+                                        <rect key="frame" x="0.0" y="215.5" width="375" height="108"/>
                                         <color key="backgroundColor" red="0.31282410469218669" green="0.99866778694959679" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
                                         <state key="normal" title="0-100"/>
@@ -46,7 +46,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2c-9U-PI9">
-                                        <rect key="frame" x="0.0" y="301.5" width="375" height="100.5"/>
+                                        <rect key="frame" x="0.0" y="323.5" width="375" height="108"/>
                                         <color key="backgroundColor" red="1" green="0.85191527639393227" blue="0.19748965825934495" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
                                         <state key="normal" title="0-500"/>
@@ -56,7 +56,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFd-ap-Jkl">
-                                        <rect key="frame" x="0.0" y="402" width="375" height="100.5"/>
+                                        <rect key="frame" x="0.0" y="431.5" width="375" height="107.5"/>
                                         <color key="backgroundColor" red="1" green="0.15099845255556221" blue="0.034743619837457884" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
                                         <state key="normal" title="0-1000"/>
@@ -66,7 +66,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyn-sx-FmG">
-                                        <rect key="frame" x="0.0" y="502.5" width="375" height="100.5"/>
+                                        <rect key="frame" x="0.0" y="539" width="375" height="108"/>
                                         <color key="backgroundColor" red="0.76078431372549016" green="0.44705882352941173" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
                                         <state key="normal" title="Custom"/>
@@ -102,7 +102,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Iiu-4K-Vhw">
-                                <rect key="frame" x="105" y="114" width="165" height="336"/>
+                                <rect key="frame" x="105" y="70" width="165" height="336"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrI-qS-aXu">
                                         <rect key="frame" x="28" y="0.0" width="109" height="20.5"/>
@@ -147,28 +147,19 @@
                                 </constraints>
                             </stackView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEV-3l-HBP">
-                                <rect key="frame" x="172.5" y="470" width="30" height="30"/>
+                                <rect key="frame" x="172.5" y="426" width="30" height="30"/>
                                 <state key="normal" title="Yes"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="PlayAgainBackToRoot" id="4T8-S7-kLA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Of Guesses:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFF-YS-QII">
-                                <rect key="frame" x="16" y="114" width="89" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Iiu-4K-Vhw" firstAttribute="centerX" secondItem="ylT-k4-BRW" secondAttribute="centerX" id="0mP-Pe-BUn"/>
-                            <constraint firstItem="tFF-YS-QII" firstAttribute="leading" secondItem="mKd-z6-ctS" secondAttribute="leading" constant="16" id="JS7-dR-M4w"/>
                             <constraint firstItem="eEV-3l-HBP" firstAttribute="centerX" secondItem="ylT-k4-BRW" secondAttribute="centerX" id="TvJ-k1-ShK"/>
-                            <constraint firstItem="tFF-YS-QII" firstAttribute="top" secondItem="mKd-z6-ctS" secondAttribute="top" constant="50" id="ViU-R4-UUO"/>
                             <constraint firstItem="Iiu-4K-Vhw" firstAttribute="top" secondItem="mKd-z6-ctS" secondAttribute="top" constant="50" id="il8-XT-u4C"/>
                             <constraint firstItem="Iiu-4K-Vhw" firstAttribute="centerX" secondItem="ylT-k4-BRW" secondAttribute="centerX" id="ma9-sb-qG5"/>
-                            <constraint firstItem="mKd-z6-ctS" firstAttribute="trailing" secondItem="tFF-YS-QII" secondAttribute="trailing" constant="270" id="sEv-K8-lc1"/>
                             <constraint firstItem="eEV-3l-HBP" firstAttribute="top" secondItem="Iiu-4K-Vhw" secondAttribute="bottom" constant="20" id="zKV-IV-OWw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mKd-z6-ctS"/>
@@ -179,7 +170,6 @@
                         <outlet property="guessingField" destination="1lD-5p-Xo5" id="zYY-hQ-F7t"/>
                         <outlet property="highOrLow" destination="uSu-Pk-MHS" id="eBb-Gx-ca8"/>
                         <outlet property="instructionLabel" destination="FrI-qS-aXu" id="Npi-hu-BIx"/>
-                        <outlet property="listOfGuesses" destination="tFF-YS-QII" id="qxZ-fQ-zVy"/>
                         <outlet property="playAgainButton" destination="eEV-3l-HBP" id="boc-Ts-VP4"/>
                         <outlet property="probabilityLabel" destination="Haw-hI-tRe" id="4MZ-KB-9l2"/>
                     </connections>
@@ -203,7 +193,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="V8q-sN-OUx">
-                                <rect key="frame" x="146" y="156" width="83" height="131"/>
+                                <rect key="frame" x="146" y="112" width="83" height="131"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkW-0j-AoY">
                                         <rect key="frame" x="0.0" y="0.0" width="83" height="60"/>
@@ -220,7 +210,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkQ-br-zNe">
-                                <rect key="frame" x="164" y="523.5" width="47" height="36"/>
+                                <rect key="frame" x="164" y="479.5" width="47" height="36"/>
                                 <color key="backgroundColor" red="0.42088468309859156" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Done"/>
@@ -230,13 +220,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the number of guesses you would like to have:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaO-ei-7IM">
-                                <rect key="frame" x="16" y="312" width="343" height="107.5"/>
+                                <rect key="frame" x="16" y="268" width="343" height="107.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="5" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="KNE-DS-cdb">
-                                <rect key="frame" x="146" y="429.5" width="83" height="64"/>
+                                <rect key="frame" x="146" y="385.5" width="83" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="83" id="av1-Br-HYa"/>
                                 </constraints>
@@ -288,46 +278,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNz-kh-nEr">
-                                <rect key="frame" x="58" y="114" width="259.5" height="60"/>
+                                <rect key="frame" x="58" y="40" width="259.5" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1) Either choose the difficulty or if you want to make a custom range" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VM1-I9-g36">
-                                <rect key="frame" x="16" y="204" width="343" height="48"/>
+                                <rect key="frame" x="16" y="130" width="343" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2) If you choose to make a custom range enter the maximum number you want to pick from.  Then tap Done." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niU-7p-mAh">
-                                <rect key="frame" x="16" y="282" width="343" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niU-7p-mAh">
+                                <rect key="frame" x="16" y="208" width="343" height="95.5"/>
+                                <string key="text">2) If you choose to make a custom range enter the maximum number you want to pick from and the number of guesses you will have.  Then tap Done.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMx-OK-cxA">
-                                <rect key="frame" x="16" y="384" width="343" height="95.5"/>
-                                <string key="text">3) Then in the text box enter your guesses.  You will always have 5 guesses.  The range depends on the difficulty.  The ranges are as follows:</string>
+                                <rect key="frame" x="16" y="333.5" width="343" height="95.5"/>
+                                <string key="text">3) Then in the text box enter your guesses.  The range and number of guesses depend on the difficulty.  The ranges are as follows:</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="96y-xG-EtG">
-                                <rect key="frame" x="16" y="509.5" width="343" height="132"/>
+                                <rect key="frame" x="16" y="459" width="343" height="132"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy: 0 - 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddg-d3-oKZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy: 0 - 100; 5 guesses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddg-d3-oKZ">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium: 0 - 500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyJ-bW-fys">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium: 0 - 500; 7 guesses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyJ-bW-fys">
                                         <rect key="frame" x="0.0" y="54" width="343" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard: 0 - 1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSz-tA-3x3">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard: 0 - 1000; 10 guesses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSz-tA-3x3">
                                         <rect key="frame" x="0.0" y="108" width="343" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
@@ -343,7 +334,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.51764705882352935" green="1" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="GNz-kh-nEr" firstAttribute="top" secondItem="9ZJ-h7-m8v" secondAttribute="top" constant="50" id="0uv-03-7WL"/>
                             <constraint firstItem="rMx-OK-cxA" firstAttribute="top" secondItem="niU-7p-mAh" secondAttribute="bottom" constant="30" id="1VQ-s2-qbi"/>
                             <constraint firstItem="96y-xG-EtG" firstAttribute="leading" secondItem="9ZJ-h7-m8v" secondAttribute="leading" constant="16" id="3CT-GM-Brv"/>
                             <constraint firstItem="9ZJ-h7-m8v" firstAttribute="trailing" secondItem="96y-xG-EtG" secondAttribute="trailing" constant="16" id="3ZO-QZ-dhJ"/>
@@ -356,6 +346,7 @@
                             <constraint firstItem="96y-xG-EtG" firstAttribute="top" secondItem="rMx-OK-cxA" secondAttribute="bottom" constant="30" id="X2P-VF-DCk"/>
                             <constraint firstItem="GNz-kh-nEr" firstAttribute="centerX" secondItem="PQA-Wy-k6G" secondAttribute="centerX" id="ZNp-wp-SEj"/>
                             <constraint firstItem="niU-7p-mAh" firstAttribute="top" secondItem="VM1-I9-g36" secondAttribute="bottom" constant="30" id="dbi-ia-PVS"/>
+                            <constraint firstItem="GNz-kh-nEr" firstAttribute="top" secondItem="9ZJ-h7-m8v" secondAttribute="top" constant="20" id="dja-2f-A0g"/>
                             <constraint firstItem="VM1-I9-g36" firstAttribute="leading" secondItem="PQA-Wy-k6G" secondAttribute="leading" constant="16" id="glW-Jd-EvO"/>
                             <constraint firstAttribute="trailing" secondItem="niU-7p-mAh" secondAttribute="trailing" constant="16" id="kkg-NX-mCf"/>
                             <constraint firstAttribute="trailing" secondItem="VM1-I9-g36" secondAttribute="trailing" constant="16" id="muN-4X-heU"/>
@@ -388,6 +379,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="afP-AS-W5l"/>
-        <segue reference="aQc-s3-BYW"/>
+        <segue reference="4T8-S7-kLA"/>
     </inferredMetricsTieBreakers>
 </document>
