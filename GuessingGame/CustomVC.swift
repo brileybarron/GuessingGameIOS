@@ -46,6 +46,16 @@ class CustomVC: ViewController {
         }
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        guard let userInput = UInt32(maxNumberInRange.text!) else{
+            instructionLabel.text = "Please use a positive number"
+            maxNumberInRange.text?.removeAll()
+            return false
+        }
+        randomNumberAndMax.randomNumber = Int.random(in: 0...Int(maxNumberInRange.text!)!)
+        randomNumberAndMax.maxNumber = Int(maxNumberInRange.text!)!
+        return true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

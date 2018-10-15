@@ -110,6 +110,7 @@ class GuessingScreenVC: UIViewController {
         probabilityLabel.text = "Probability: \(round(probability * 1000)/1000)%"
     }
     
+
     //LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
