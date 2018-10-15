@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBAction func oneToOneHundredButtonTapped(_ sender: Any) {
         randomNumberAndMax.randomNumber = Int.random(in: 0...100) //creates a random number
         randomNumberAndMax.maxNumber = 100 //and sets the max number and does this for all difficulties except custom
+        randomNumberAndMax.guesses = 5
     }
     
     @IBAction func oneToFiveHundredButtonTapped(_ sender: Any) {

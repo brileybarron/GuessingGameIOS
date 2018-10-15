@@ -30,8 +30,8 @@ class GuessingScreenVC: UIViewController {
     
     //IB Actions
     @IBAction func guessButtonTapped(_ sender: Any) {
-        
         if let intGuess = Int(guessingField.text!) { //checks to see if the text box can be an integer
+
             //If it is
             if intGuess > randomNumberAndMax.randomNumber! { //Gives either a too high or too low to guide the user
                 //updates the labels
@@ -56,7 +56,7 @@ class GuessingScreenVC: UIViewController {
                 //hides the button for guessing and unhides the button that takes them back to the starting screen
                 playAgainButton.isHidden = false
                 guessButton.isHidden = true
-            } else if guesses == 0 { //checks to see if the guesses are at 0 if they are then it tells the user that they are out of guesses and asks if they would like to play again
+            } else if randomNumberAndMax.guesses! == 0 { //checks to see if the guesses are at 0 if they are then it tells the user that they are out of guesses and asks if they would like to play again
                 guessesRemaining.text = "Would you like to play again?"
                 highOrLow.text = "The correct answer was \(randomNumberAndMax.randomNumber!)"
                 //hides the button for guessing and unhides the button that takes them back to the starting screen
@@ -91,35 +91,11 @@ class GuessingScreenVC: UIViewController {
         }
     }
     
-//    func updateGuesses (userInput: Int) { //this is only used to update the text in the guess history
-//        if guessesUsed.count == 2 {
-//            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1])"
-//        } else if guessesUsed.count == 4 {
-//            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1]), \(guessesUsed[2]) \(guessesUsed[3])"
-//        } else if guessesUsed.count == 6 {
-//            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1]), \(guessesUsed[2]) \(guessesUsed[3]), \(guessesUsed[4]) \(guessesUsed[5])"
-//        } else if guessesUsed.count == 8 {
-//            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1]), \(guessesUsed[2]) \(guessesUsed[3]), \(guessesUsed[4]) \(guessesUsed[5]), \(guessesUsed[6]) \(guessesUsed[7])"
-//        } else if guessesUsed.count == 10 {
-//            listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1]), \(guessesUsed[2]) \(guessesUsed[3]), \(guessesUsed[4]) \(guessesUsed[5]), , \(guessesUsed[6]) \(guessesUsed[7]), \(guessesUsed[8]) \(guessesUsed[9])"
-//        }
-//    }
-//
+
     func updateProbability () { //recalculates the probability and updates the probability label
-//        var numer = 1
-//
-//        for nums in 0...(randomNumberAndMax.guesses! - 2){
-//            numer *= 2
-//        }
+
         probability = 1 / Double(avaliableRange.count) * 100
         probabilityLabel.text = "Probability: \(round(probability * 1000)/1000)%"
-//        if numer < randomNumberAndMax.maxNumber! {
-//            overallPercentProbability = (Double(numer) / Double(randomNumberAndMax.maxNumber!)) * 100
-//            overallPercentProbability = round(overallPercentProbability * 100) / 100
-//            overallProbability.text = "Overall Probability: \(overallPercentProbability)%"
-//        } else {
-//            overallProbability.text = "Overall Probability: 100%"
-//        }
     }
     
 
