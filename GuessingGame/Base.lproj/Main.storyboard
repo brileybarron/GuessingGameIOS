@@ -196,14 +196,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the maximum value for the range:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRl-rk-a5i">
-                                <rect key="frame" x="16" y="176" width="343" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please enter the maximum value for the range:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRl-rk-a5i">
+                                <rect key="frame" x="16" y="74" width="343" height="112"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="V8q-sN-OUx">
-                                <rect key="frame" x="146" y="268" width="83" height="131"/>
+                                <rect key="frame" x="146" y="156" width="83" height="131"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkW-0j-AoY">
                                         <rect key="frame" x="0.0" y="0.0" width="83" height="60"/>
@@ -215,12 +215,12 @@
                                         <rect key="frame" x="0.0" y="67" width="83" height="64"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkQ-br-zNe">
-                                <rect key="frame" x="164" y="419" width="47" height="36"/>
+                                <rect key="frame" x="164" y="523.5" width="47" height="36"/>
                                 <color key="backgroundColor" red="0.42088468309859156" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Done"/>
@@ -229,29 +229,55 @@
                                     <segue destination="0ed-JE-wzP" kind="show" identifier="CustomVCToGuessingScreen" id="afP-AS-W5l"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the number of guesses you would like to have:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaO-ei-7IM">
+                                <rect key="frame" x="16" y="312" width="343" height="107.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="5" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="KNE-DS-cdb">
+                                <rect key="frame" x="146" y="429.5" width="83" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="av1-Br-HYa"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.76078431372549016" green="0.44705882352941173" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="nkQ-br-zNe" firstAttribute="centerX" secondItem="xRl-rk-a5i" secondAttribute="centerX" id="3C7-B4-Eb5"/>
+                            <constraint firstItem="MaO-ei-7IM" firstAttribute="leading" secondItem="eq6-mW-wjR" secondAttribute="leading" constant="16" id="3Fr-L1-nnW"/>
                             <constraint firstItem="1LO-c5-IcJ" firstAttribute="trailing" secondItem="xRl-rk-a5i" secondAttribute="trailing" constant="16" id="BVL-T0-gze"/>
-                            <constraint firstItem="V8q-sN-OUx" firstAttribute="centerX" secondItem="eq6-mW-wjR" secondAttribute="centerX" id="Kkr-V6-f21"/>
-                            <constraint firstItem="V8q-sN-OUx" firstAttribute="centerY" secondItem="eq6-mW-wjR" secondAttribute="centerY" id="Pxp-Cz-0P5"/>
+                            <constraint firstItem="V8q-sN-OUx" firstAttribute="top" secondItem="xRl-rk-a5i" secondAttribute="bottom" constant="10" id="CCj-TU-fdb"/>
+                            <constraint firstItem="V8q-sN-OUx" firstAttribute="centerX" secondItem="xRl-rk-a5i" secondAttribute="centerX" id="HSy-gU-BdR"/>
+                            <constraint firstItem="MaO-ei-7IM" firstAttribute="centerX" secondItem="xRl-rk-a5i" secondAttribute="centerX" id="HaB-oE-eme"/>
+                            <constraint firstItem="nkQ-br-zNe" firstAttribute="top" secondItem="KNE-DS-cdb" secondAttribute="bottom" constant="30" id="KOG-la-zzk"/>
+                            <constraint firstItem="1LO-c5-IcJ" firstAttribute="trailing" secondItem="KNE-DS-cdb" secondAttribute="trailing" constant="146" id="LyI-un-0LM"/>
+                            <constraint firstItem="V8q-sN-OUx" firstAttribute="top" secondItem="xRl-rk-a5i" secondAttribute="bottom" constant="10" id="NHW-zO-g27"/>
+                            <constraint firstItem="KNE-DS-cdb" firstAttribute="top" secondItem="MaO-ei-7IM" secondAttribute="bottom" constant="10" id="QaJ-j4-ymM"/>
+                            <constraint firstItem="xRl-rk-a5i" firstAttribute="top" secondItem="1LO-c5-IcJ" secondAttribute="top" constant="10" id="V1l-ar-2r2"/>
                             <constraint firstItem="xRl-rk-a5i" firstAttribute="leading" secondItem="1LO-c5-IcJ" secondAttribute="leading" constant="16" id="Vqy-MQ-uFp"/>
-                            <constraint firstItem="xRl-rk-a5i" firstAttribute="centerX" secondItem="eq6-mW-wjR" secondAttribute="centerX" id="gWl-Qf-otA"/>
-                            <constraint firstItem="nkQ-br-zNe" firstAttribute="centerX" secondItem="eq6-mW-wjR" secondAttribute="centerX" id="gnX-PH-u7s"/>
-                            <constraint firstItem="nkQ-br-zNe" firstAttribute="top" secondItem="V8q-sN-OUx" secondAttribute="bottom" constant="20" id="liZ-9Y-yaf"/>
-                            <constraint firstItem="V8q-sN-OUx" firstAttribute="top" secondItem="xRl-rk-a5i" secondAttribute="bottom" constant="20" id="zRP-AT-HqM"/>
+                            <constraint firstItem="V8q-sN-OUx" firstAttribute="centerX" secondItem="nkQ-br-zNe" secondAttribute="centerX" id="caP-jn-jmD"/>
+                            <constraint firstItem="KNE-DS-cdb" firstAttribute="leading" secondItem="1LO-c5-IcJ" secondAttribute="leading" constant="146" id="dbo-ss-R9p"/>
+                            <constraint firstItem="MaO-ei-7IM" firstAttribute="top" secondItem="V8q-sN-OUx" secondAttribute="bottom" constant="25" id="fdh-am-sC0"/>
+                            <constraint firstItem="1LO-c5-IcJ" firstAttribute="trailing" secondItem="MaO-ei-7IM" secondAttribute="trailing" constant="16" id="mWE-cR-UZa"/>
+                            <constraint firstItem="KNE-DS-cdb" firstAttribute="centerX" secondItem="xRl-rk-a5i" secondAttribute="centerX" id="owH-cz-veS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1LO-c5-IcJ"/>
                     </view>
                     <connections>
                         <outlet property="checkRange" destination="nkQ-br-zNe" id="J1H-K8-mPW"/>
+                        <outlet property="guessesInstructionLabel" destination="MaO-ei-7IM" id="gUi-oV-GRp"/>
                         <outlet property="instructionLabel" destination="xRl-rk-a5i" id="lLH-Jw-IZc"/>
                         <outlet property="maxNumberInRange" destination="RKR-vU-1iz" id="dse-Fb-7se"/>
+                        <outlet property="numberOfGuesses" destination="KNE-DS-cdb" id="15L-bL-7nS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cdk-zp-fjo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="993" y="893"/>
+            <point key="canvasLocation" x="992.79999999999995" y="892.80359820089961"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="e39-Mw-i7N">
@@ -262,32 +288,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNz-kh-nEr">
-                                <rect key="frame" x="58" y="70" width="259.5" height="60"/>
+                                <rect key="frame" x="58" y="114" width="259.5" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1) Either choose the difficulty or if you want to make a custom range" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VM1-I9-g36">
-                                <rect key="frame" x="16" y="160" width="343" height="48"/>
+                                <rect key="frame" x="16" y="204" width="343" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2) If you choose to make a custom range enter the maximum number you want to pick from.  Then tap Done." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niU-7p-mAh">
-                                <rect key="frame" x="16" y="238" width="343" height="72"/>
+                                <rect key="frame" x="16" y="282" width="343" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMx-OK-cxA">
-                                <rect key="frame" x="16" y="340" width="343" height="95.5"/>
+                                <rect key="frame" x="16" y="384" width="343" height="95.5"/>
                                 <string key="text">3) Then in the text box enter your guesses.  You will always have 5 guesses.  The range depends on the difficulty.  The ranges are as follows:</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="96y-xG-EtG">
-                                <rect key="frame" x="16" y="465.5" width="343" height="132"/>
+                                <rect key="frame" x="16" y="509.5" width="343" height="132"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy: 0 - 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddg-d3-oKZ">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>

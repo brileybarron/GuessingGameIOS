@@ -12,7 +12,7 @@ class GuessingScreenVC: UIViewController {
     
     //Properties
     var guesses = 5
-    var randomNumberAndMax : (randomNumber: Int?, maxNumber: Int?)
+    var randomNumberAndMax : (randomNumber: Int?, maxNumber: Int?, guesses: Int?)
     var probability : Double = 0
     var avaliableRange = [Int]()
     var guessesUsed = [String]()
@@ -30,59 +30,58 @@ class GuessingScreenVC: UIViewController {
     //IB Actions
     @IBAction func guessButtonTapped(_ sender: Any) {
         
-        if let intGuess = Int(guessingField.text!) {
-            
+        if let intGuess = Int(guessingField.text!) { //checks to see if the text box can be an integer
+            //If it is
             if intGuess > randomNumberAndMax.randomNumber! { //Gives either a too high or too low to guide the user
+                //updates the labels
                 highOrLow.text = "Your Guess was Too High"
+                //updates the array for probability
                 eliminateNumbers(userInput: intGuess, high: true)
-                let userGuess = String(intGuess)
-                guessesUsed.append(userGuess)
-                guessesUsed.append("too hi")
-                updateGuesses(userInput: intGuess)
+                //converts the user guess to a string to allow for easier updating of a string array
+
+                //then updates the probability
                 updateProbability()
-            } else if intGuess < randomNumberAndMax.randomNumber! {
+            } else if intGuess < randomNumberAndMax.randomNumber! { //same thing is done below
                 highOrLow.text = "Your Guess was Too low"
                 eliminateNumbers(userInput: intGuess, high: false)
-                let userGuess = String(intGuess)
-                guessesUsed.append(userGuess)
-                guessesUsed.append("too lo")
-                updateGuesses(userInput: intGuess)
                 updateProbability()
             }
             
-            guesses -= 1 //takes away a guess
+            randomNumberAndMax.guesses! -= 1 //takes away a guess
             
-            if Int(guessingField.text!) == randomNumberAndMax.randomNumber {
+            if Int(guessingField.text!) == randomNumberAndMax.randomNumber { //checks to see if the guess is the random number and tells them they won
                 highOrLow.text = "Congrats, you have won."
                 guessesRemaining.text = "Would you like to play again?"
+                //hides the button for guessing and unhides the button that takes them back to the starting screen
                 playAgainButton.isHidden = false
                 guessButton.isHidden = true
-            } else if guesses == 0 {
+            } else if guesses == 0 { //checks to see if the guesses are at 0 if they are then it tells the user that they are out of guesses and asks if they would like to play again
                 guessesRemaining.text = "Would you like to play again?"
                 highOrLow.text = "The correct answer was \(randomNumberAndMax.randomNumber!)"
+                //hides the button for guessing and unhides the button that takes them back to the starting screen
                 playAgainButton.isHidden = false
                 guessButton.isHidden = true
-            } else {
-                guessesRemaining.text = "\(guesses) guesses remaining"
+            } else { //if there are still guesses remaining then it allows the user to continue with the game
+                guessesRemaining.text = "\(randomNumberAndMax.guesses!) guesses remaining"
             }
             
         } else {
-            
+            //if not then
             highOrLow.text = "Please use a number"
         
         }
-        
+        //removes al the text from the text field
         guessingField.text?.removeAll()
     }
     
-    func eliminateNumbers (userInput: Int, high: Bool){
-        if high == true {
+    func eliminateNumbers (userInput: Int, high: Bool){//this will update the array of numbers used to find the probability
+        if high == true { //if the guess was too high then it removes anything higher than the user's guess
             for number in avaliableRange {
                 if number >= userInput{
                     avaliableRange.remove(at: avaliableRange.firstIndex(of: number)!)
                 }
             }
-        } else {
+        } else { // and if the guess is too low then it removes anything below the user's guess
             for number in avaliableRange {
                 if number <= userInput{
                     avaliableRange.remove(at: avaliableRange.firstIndex(of: number)!)
@@ -91,7 +90,7 @@ class GuessingScreenVC: UIViewController {
         }
     }
     
-    func updateGuesses (userInput: Int) {
+    func updateGuesses (userInput: Int) { //this is only used to update the text in the guess history
         if guessesUsed.count == 2 {
             listOfGuesses.text = "List of Guesses: \(guessesUsed[0]) \(guessesUsed[1])"
         } else if guessesUsed.count == 4 {
@@ -105,33 +104,35 @@ class GuessingScreenVC: UIViewController {
         }
     }
     
-    func updateProbability () {
+    func updateProbability () { //recalculates the probability and updates the probability label
         probability = 1 / Double(avaliableRange.count) * 100
         probabilityLabel.text = "Probability: \(round(probability * 1000)/1000)%"
     }
     
 
     //LifeCycle
-    override func viewDidLoad() {
+    override func viewDidLoad() { //when loading the view the program checks to see if all the data is correct
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        if let data = randomNumberAndMax.randomNumber {
+        if let data = randomNumberAndMax.randomNumber { //integer validation
             randomNumberAndMax.randomNumber = data
             print("random number: \(String(describing: randomNumberAndMax.randomNumber))")
         } else {
-            print("error: \(String(describing: randomNumberAndMax.randomNumber))")
+            print("error: \(String(describing: randomNumberAndMax.randomNumber))")//gives an error message if something goes wrong
         }
         
-        if let data = randomNumberAndMax.maxNumber {
+        if let data = randomNumberAndMax.maxNumber {//integer validation
             randomNumberAndMax.maxNumber = data
             print("random number: \(String(describing: randomNumberAndMax.maxNumber))")
         } else {
-            print("error: \(String(describing: randomNumberAndMax.maxNumber))")
+            print("error: \(String(describing: randomNumberAndMax.maxNumber))")//gives an error message if something goes wrong
         }
-        guesses = 5 //everytime the App is loaded the guesses go back to 5
-        avaliableRange = Array(0...randomNumberAndMax.maxNumber!)
-        updateProbability()
+        avaliableRange = Array(0...randomNumberAndMax.maxNumber!) //updates the range
+        updateProbability() //and the probability
+        
+        //adds a gesture that allows the keyboard to be lowered if tapped outside of the keyboard.
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: Selector("endEditing:")))
     }
     
 
