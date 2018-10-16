@@ -23,13 +23,13 @@ class ViewController: UIViewController {
     @IBAction func oneToFiveHundredButtonTapped(_ sender: Any) {
         randomNumberAndMax.randomNumber = Int.random(in: 0...500)
         randomNumberAndMax.maxNumber = 500
-        randomNumberAndMax.guesses = 7
+        randomNumberAndMax.guesses = 6
     }
     
     @IBAction func oneToOneThousandButtonTapped(_ sender: Any) {
         randomNumberAndMax.randomNumber = Int.random(in: 0...1000)
         randomNumberAndMax.maxNumber = 1000
-        randomNumberAndMax.guesses = 10
+        randomNumberAndMax.guesses = 7
     }
     
     
