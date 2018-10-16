@@ -14,6 +14,7 @@
 		3B7CB1D5216BE84000FFCCA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7CB1D3216BE84000FFCCA1 /* LaunchScreen.storyboard */; };
 		3B7CB1DD216D07BB00FFCCA1 /* GuessingScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB1DC216D07BB00FFCCA1 /* GuessingScreenVC.swift */; };
 		3B7CB1DF216D887200FFCCA1 /* CustomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB1DE216D887200FFCCA1 /* CustomVC.swift */; };
+		3B7CB1F421765C4700FFCCA1 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CB1F321765C4700FFCCA1 /* StatsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3B7CB1D6216BE84000FFCCA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B7CB1DC216D07BB00FFCCA1 /* GuessingScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessingScreenVC.swift; sourceTree = "<group>"; };
 		3B7CB1DE216D887200FFCCA1 /* CustomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVC.swift; sourceTree = "<group>"; };
+		3B7CB1F321765C4700FFCCA1 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +62,13 @@
 			children = (
 				3B7CB1CA216BE83F00FFCCA1 /* AppDelegate.swift */,
 				3B7CB1CC216BE83F00FFCCA1 /* ViewController.swift */,
+				3B7CB1DC216D07BB00FFCCA1 /* GuessingScreenVC.swift */,
+				3B7CB1DE216D887200FFCCA1 /* CustomVC.swift */,
+				3B7CB1F321765C4700FFCCA1 /* StatsViewController.swift */,
 				3B7CB1CE216BE83F00FFCCA1 /* Main.storyboard */,
 				3B7CB1D1216BE84000FFCCA1 /* Assets.xcassets */,
 				3B7CB1D3216BE84000FFCCA1 /* LaunchScreen.storyboard */,
 				3B7CB1D6216BE84000FFCCA1 /* Info.plist */,
-				3B7CB1DC216D07BB00FFCCA1 /* GuessingScreenVC.swift */,
-				3B7CB1DE216D887200FFCCA1 /* CustomVC.swift */,
 			);
 			path = GuessingGame;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				3B7CB1DD216D07BB00FFCCA1 /* GuessingScreenVC.swift in Sources */,
 				3B7CB1DF216D887200FFCCA1 /* CustomVC.swift in Sources */,
 				3B7CB1CD216BE83F00FFCCA1 /* ViewController.swift in Sources */,
+				3B7CB1F421765C4700FFCCA1 /* StatsViewController.swift in Sources */,
 				3B7CB1CB216BE83F00FFCCA1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +295,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TTVLBN33C8;
 				INFOPLIST_FILE = GuessingGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -308,6 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TTVLBN33C8;
 				INFOPLIST_FILE = GuessingGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

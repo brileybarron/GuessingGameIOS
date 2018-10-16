@@ -75,6 +75,35 @@ class GuessingScreenVC: UIViewController {
         guessingField.text?.removeAll()
     }
     
+    func win() {
+        
+        let defaults = UserDefaults.standard
+        
+        let wins = defaults.integer(forKey: "wins")
+        
+        defaults.set(wins + 1, forKey: "wins")
+        
+        highOrLow.text = "Congrats, you have won."
+        guessesRemaining.text = "Would you like to play again?"
+        //hides the button for guessing and unhides the button that takes them back to the starting screen
+        playAgainButton.isHidden = false
+        guessButton.isHidden = true
+    }
+    
+    func lose() {
+        let defaults = UserDefaults.standard
+        
+        let loses = defaults.integer(forKey: "loses")
+        
+        defaults.set(loses + 1, forKey: "loses")
+        
+        guessesRemaining.text = "Would you like to play again?"
+        highOrLow.text = "The correct answer was \(randomNumberAndMax.randomNumber!)"
+        //hides the button for guessing and unhides the button that takes them back to the starting screen
+        playAgainButton.isHidden = false
+        guessButton.isHidden = true
+    }
+    
     func eliminateNumbers (userInput: Int, high: Bool){//this will update the array of numbers used to find the probability
         if high == true { //if the guess was too high then it removes anything higher than the user's guess
             for number in avaliableRange {

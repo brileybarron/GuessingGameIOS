@@ -21,13 +21,13 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To The Guessing Game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOq-16-vCh">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="92.5"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8Y-uy-4ZY">
-                                        <rect key="frame" x="0.0" y="108" width="375" height="107.5"/>
+                                        <rect key="frame" x="0.0" y="92.5" width="375" height="92.5"/>
                                         <color key="backgroundColor" red="0.51804250415142639" green="1" blue="0.52509858115590302" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
                                         <state key="normal" title="How To Play"/>
@@ -35,8 +35,17 @@
                                             <segue destination="QlB-UW-vC1" kind="show" identifier="HowToPlayToHowToPlayScreen" id="B9j-gW-uNU"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oD-wH-N0r">
+                                        <rect key="frame" x="0.0" y="185" width="375" height="92.5"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
+                                        <state key="normal" title="Statistics"/>
+                                        <connections>
+                                            <segue destination="EuE-8G-GUA" kind="show" id="xut-62-vEy"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQO-ih-Ftr">
-                                        <rect key="frame" x="0.0" y="215.5" width="375" height="108"/>
+                                        <rect key="frame" x="0.0" y="277.5" width="375" height="92"/>
                                         <color key="backgroundColor" red="0.31282410469218669" green="0.99866778694959679" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
                                         <state key="normal" title="0-100"/>
@@ -46,7 +55,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2c-9U-PI9">
-                                        <rect key="frame" x="0.0" y="323.5" width="375" height="108"/>
+                                        <rect key="frame" x="0.0" y="369.5" width="375" height="92.5"/>
                                         <color key="backgroundColor" red="1" green="0.85191527639393227" blue="0.19748965825934495" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
                                         <state key="normal" title="0-500"/>
@@ -56,7 +65,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFd-ap-Jkl">
-                                        <rect key="frame" x="0.0" y="431.5" width="375" height="107.5"/>
+                                        <rect key="frame" x="0.0" y="462" width="375" height="92.5"/>
                                         <color key="backgroundColor" red="1" green="0.15099845255556221" blue="0.034743619837457884" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
                                         <state key="normal" title="0-1000"/>
@@ -66,7 +75,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyn-sx-FmG">
-                                        <rect key="frame" x="0.0" y="539" width="375" height="108"/>
+                                        <rect key="frame" x="0.0" y="554.5" width="375" height="92.5"/>
                                         <color key="backgroundColor" red="0.76078431372549016" green="0.44705882352941173" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
                                         <state key="normal" title="Custom"/>
@@ -269,6 +278,86 @@
             </objects>
             <point key="canvasLocation" x="992.79999999999995" y="892.80359820089961"/>
         </scene>
+        <!--Stats View Controller-->
+        <scene sceneID="Kb1-Do-blY">
+            <objects>
+                <viewController id="EuE-8G-GUA" customClass="StatsViewController" customModule="GuessingGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A6c-cm-0fK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="m8X-YF-OWh">
+                                <rect key="frame" x="101.5" y="105" width="172" height="457"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXL-DW-lWB">
+                                        <rect key="frame" x="38.5" y="0.0" width="95" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wins + losses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZ9-ny-ha3">
+                                        <rect key="frame" x="0.0" y="53.5" width="172" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Wins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTR-xA-dHQ">
+                                        <rect key="frame" x="46.5" y="122.5" width="79.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKC-hM-Uup">
+                                        <rect key="frame" x="56.5" y="176" width="59" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Losses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZM-UA-ZGy">
+                                        <rect key="frame" x="38.5" y="245" width="95" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="losses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gS-pd-uMZ">
+                                        <rect key="frame" x="45.5" y="298.5" width="81.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Win Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqL-7e-56j">
+                                        <rect key="frame" x="52" y="367.5" width="68.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="win percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRR-KI-77L">
+                                        <rect key="frame" x="11.5" y="421" width="149.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="m8X-YF-OWh" firstAttribute="centerY" secondItem="A6c-cm-0fK" secondAttribute="centerY" id="3V9-X5-saA"/>
+                            <constraint firstItem="m8X-YF-OWh" firstAttribute="centerX" secondItem="A6c-cm-0fK" secondAttribute="centerX" id="TyC-ZY-48n"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hNx-aU-bHA"/>
+                    </view>
+                    <connections>
+                        <outlet property="losses" destination="8gS-pd-uMZ" id="pG8-xC-hSD"/>
+                        <outlet property="winPercent" destination="cRR-KI-77L" id="XBh-jI-ZhW"/>
+                        <outlet property="wins" destination="fKC-hM-Uup" id="wZr-R1-XPF"/>
+                        <outlet property="winsAndLosses" destination="hZ9-ny-ha3" id="8tE-mx-G0r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vH9-8L-8qy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992.79999999999995" y="-743.47826086956525"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="e39-Mw-i7N">
             <objects>
@@ -378,7 +467,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="afP-AS-W5l"/>
+        <segue reference="sgB-eW-vxX"/>
         <segue reference="4T8-S7-kLA"/>
     </inferredMetricsTieBreakers>
 </document>
